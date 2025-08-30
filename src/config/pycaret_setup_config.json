@@ -1,0 +1,28 @@
+{
+  "X_columns": [
+    "Area",
+    "Perimeter",
+    "Compactness",
+    "Length",
+    "Width",
+    "AsymmetryCoeff",
+    "Groove"
+  ],
+  "X_dtypes": {
+    "Area": "float32",
+    "Perimeter": "float32",
+    "Compactness": "float32",
+    "Length": "float32",
+    "Width": "float32",
+    "AsymmetryCoeff": "float32",
+    "Groove": "float32"
+  },
+  "classes": [
+    1,
+    2,
+    3
+  ],
+  "folds": 10,
+  "random_state": 42,
+  "pipeline_repr": "Pipeline(memory=FastMemory(location=C:\\Users\\alexy\\AppData\\Local\\Temp\\joblib),\n         steps=[('label_encoding',\n                 TransformerWrapperWithInverse(exclude=None, include=None,\n                                               transformer=LabelEncoder())),\n                ('numerical_imputer',\n                 TransformerWrapper(exclude=None,\n                                    include=['Area', 'Perimeter', 'Compactness',\n                                             'Length', 'Width',\n                                             'AsymmetryCoeff', 'Groove'],\n                                    transformer=SimpleImput...\n                                                                                         learning_rate=0.1,\n                                                                                         max_depth=-1,\n                                                                                         min_child_samples=20,\n                                                                                         min_child_weight=0.001,\n                                                                                         min_split_gain=0.0,\n                                                                                         n_estimators=100,\n                                                                                         n_jobs=None,\n                                                                                         num_leaves=31,\n                                                                                         objective=None,\n                                                                                         random_state=None,\n                                                                                         reg_alpha=0.0,\n                                                                                         reg_lambda=0.0,\n                                                                                         subsample=1.0,\n                                                                                         subsample_for_bin=200000,\n                                                                                         subsample_freq=0),\n                                                                importance_getter='auto',\n                                                                max_features=1,\n                                                                norm_order=1,\n                                                                prefit=False,\n                                                                threshold=-inf)))],\n         verbose=False)"
+}

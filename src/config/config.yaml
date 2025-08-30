@@ -1,0 +1,26 @@
+# config/config.yaml
+dataset:
+  raw_path: "data/raw/02_Used_Car_Prices.xlsx"
+  processed_path: "data/processed/clean_used_car_prices.csv"
+
+preprocessing:
+  current_year: 2024
+  max_km_per_year: 30000
+  max_power: 400
+  mileage_replace: [" kmpl", " km/kg"]
+  power_replace: " bhp"
+  engine_replace: " CC"
+  brand_temp_replace:
+    original: "Land Rover"
+    temp: "Land-Rover"
+
+model:
+  save_path: "models/catboost_used_car_model"
+  mlflow_tracking_uri: "http://localhost:5000"
+  mlflow_experiment: "Used_Car_Price_Prediction"
+  session_id: 42
+  normalize: true
+  rare_to_value: 0.01
+  bin_numeric_features: ["Mileage", "Engine", "Car_Age"]
+  tune_metric: "R2"
+  n_select_top_models: 5

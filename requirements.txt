@@ -1,0 +1,4 @@
+pycaret[full]
+mlflow
+streamlit
+openpyxl

@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.env
+
+
+# Logs
+*.log
+
+# PyCaret / MLflow
+artifacts/
+mlartifacts/
+mlruns/
+catboost_info/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Hydra
+outputs/

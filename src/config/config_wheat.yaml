@@ -1,0 +1,29 @@
+hydra:
+  run:
+    dir: .          # keep CWD as repo root
+  output_subdir: null
+  job:
+    chdir: false
+
+paths:
+  data_csv: data/wheatseeds/03_Wheat_Seeds.csv
+  model_stem: models/wheat_seeds_pipeline          # no .pkl
+  schema_json: src/config/pycaret_setup_config.json
+  example_json: data/wheatseeds/example_request.json
+  batch_csv: data/wheatseeds/wheat_seeds_batch_examples.csv
+  artifacts_dir: artifacts/wheat_task2
+
+train:
+  random_state: 42
+  folds: 10
+  tune_iter: 50
+  compare_n_select: 3
+  optimize: F1
+  polynomial_features: false
+  polynomial_degree: 2
+  polynomial_threshold: 0.1
+  bin_numeric_features: []   # e.g. ["Area","Perimeter","Length","Width","Groove"]
+
+mlflow:
+  experiment: IT3385_WheatSeeds_Task2
+  tracking_uri: ${oc.env:MLFLOW_TRACKING_URI,null}

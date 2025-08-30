@@ -1,0 +1,5 @@
+outs:
+- md5: de5404e02c0bfee5c9633dc98b404f34
+  size: 430051
+  hash: md5
+  path: 02_Used_Car_Prices.xlsx
